@@ -11,7 +11,7 @@ gem 'capistrano-rvm'
 gem 'capistrano-websocket-rails'
 
 gem 'dotenv-rails'
-
+gem "nokogiri", ">= 1.10.8"
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
