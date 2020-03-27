@@ -1,6 +1,6 @@
 require 'pry'
 
-class TwilioCapability < ApplicationRecord
+class TwilioCapability
   def self.generate(role)
 
     # account_sid     = ENV['TWILIO_ACCOUNT_SID']
