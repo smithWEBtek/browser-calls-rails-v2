@@ -1,5 +1,3 @@
-require 'pry'
-
 class TwilioCapability
   def self.generate(role)
 
