@@ -2,8 +2,7 @@ require 'pry'
 
 class TwilioCapability
   def self.generate(role)
-    # To find TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN visit
-    # https://www.twilio.com/user/account
+  
     # account_sid     = ENV['TWILIO_ACCOUNT_SID']
     account_sid = Rails.application.secrets.twilio[:account_sid]
     
