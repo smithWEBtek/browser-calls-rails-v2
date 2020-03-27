@@ -2,7 +2,7 @@
 lock "~> 3.12.1"
 
 set :application, "poc"
-set :repo_url, "git@github.com:smithwebtek/browser-calls-rails.git"
+set :repo_url, "git@github.com:smithwebtek/browser-calls-rails-v2.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
