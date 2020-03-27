@@ -12,6 +12,12 @@ gem 'capistrano-websocket-rails'
 
 gem 'dotenv-rails'
 gem "nokogiri", ">= 1.10.8"
+gem "actionview", ">= 5.2.4.2"
+gem "rake", ">= 12.3.3"
+gem "rack", ">= 2.0.8"
+gem "loofah", ">= 2.3.1"
+gem "bootstrap-sass", ">= 3.4.1"
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -20,7 +26,6 @@ group :assets do
   gem 'uglifier', '>= 1.3.0'
 end
 
-gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
 gem 'twilio-ruby', '~> 5.17.0'
 
