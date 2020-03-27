@@ -12,7 +12,7 @@ class TwilioCapability
     # application_sid = ENV['TWIML_APPLICATION_SID']
     # application_sid = Rails.application.secrets.twilio[:sid]
     application_sid = Rails.application.secrets.twilio[:twiml_app_sid]
- 
+  
     capability = Twilio::JWT::ClientCapability.new(account_sid, auth_token)
     outgoing_scope = Twilio::JWT::ClientCapability::OutgoingClientScope.new(application_sid, role)
     capability.add_scope outgoing_scope
