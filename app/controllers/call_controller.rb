@@ -8,7 +8,9 @@ class CallController < ApplicationController
   private
 
   def twilio_reponse
-    twilio_number = ENV['TWILIO_PHONE_NUMBER']
+    # twilio_number = ENV['TWILIO_PHONE_NUMBER']
+    twilio_number = '+16173973501'
+
     res = Twilio::TwiML::VoiceResponse.new do |response|
       dial = Twilio::TwiML::Dial.new(caller_id: twilio_number)
 
