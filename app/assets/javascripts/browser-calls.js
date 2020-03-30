@@ -17,8 +17,8 @@ function updateCallStatus(status) {
 
 /* Get a Twilio Client token with an AJAX request */
 $(document).ready(function () {
-    console.log('document ready loaded')
-  $.post("/token/generate", {page: window.location.pathname}, function(data) {
+  console.log('document ready loaded')
+  $.post("/token/generate", { page: window.location.pathname }, function (data) {
     console.log("We have a token!! ", data.token)
     userGesture(data.token);
   });
@@ -63,7 +63,7 @@ Twilio.Device.connect(function (connection) {
 });
 
 /* Callback for when a call ends */
-Twilio.Device.disconnect(function(connection) {
+Twilio.Device.disconnect(function (connection) {
   // Disable the hangup button and enable the call buttons
   hangUpButton.prop("disabled", true);
   callCustomerButtons.prop("disabled", false);
@@ -73,16 +73,16 @@ Twilio.Device.disconnect(function(connection) {
 });
 
 /* Callback for when Twilio Client receives a new incoming call */
-Twilio.Device.incoming(function(connection) {
+Twilio.Device.incoming(function (connection) {
   updateCallStatus("Incoming support call");
 
   // Set a callback to be executed when the connection is accepted
-  connection.accept(function() {
+  connection.accept(function () {
     updateCallStatus("In call with customer");
   });
 
   // Set a callback on the answer button and enable it
-  answerButton.click(function() {
+  answerButton.click(function () {
     connection.accept();
   });
   answerButton.prop("disabled", false);
@@ -92,7 +92,8 @@ Twilio.Device.incoming(function(connection) {
 function callCustomer(phoneNumber) {
   updateCallStatus("Calling " + phoneNumber + "...");
 
-  var params = {"phoneNumber": phoneNumber};
+  var params = { "phoneNumber": phoneNumber, "callerId": phoneNumber };
+  console.log('callCustomerParams: ', params)
   Twilio.Device.connect(params);
 }
 
