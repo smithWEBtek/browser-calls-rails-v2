@@ -9,7 +9,8 @@ class CallController < ApplicationController
 
   def twilio_reponse
     # twilio_number = ENV['TWILIO_PHONE_NUMBER']
-    twilio_number = '+16173973501'
+    # twilio_number = '+16173973501'
+    twilio_number = Rails.application.secrets.twilio[:phone_number]
 
     res = Twilio::TwiML::VoiceResponse.new do |response|
       dial = Twilio::TwiML::Dial.new(caller_id: twilio_number)
