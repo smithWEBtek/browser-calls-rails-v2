@@ -92,7 +92,7 @@ Twilio.Device.incoming(function (connection) {
 function callCustomer(phoneNumber) {
   updateCallStatus("Calling " + phoneNumber + "...");
 
-  var params = { "phoneNumber": phoneNumber, "callerId": phoneNumber };
+  var params = { "phoneNumber": phoneNumber, "callerId": "617397350" };
   console.log('callCustomerParams: ', params)
   Twilio.Device.connect(params);
 }
