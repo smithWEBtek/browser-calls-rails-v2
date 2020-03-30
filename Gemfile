@@ -17,6 +17,8 @@ gem "rake", ">= 12.3.3"
 gem "rack", ">= 2.0.8"
 gem "loofah", ">= 2.3.1"
 gem "bootstrap-sass", ">= 3.4.1"
+gem "ed25519", ">= 1.2"
+gem "bcrypt_pbkdf", ">= 1.0"
 
 # Gems used only for assets and not required
 # in production environments by default.
