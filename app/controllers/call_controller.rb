@@ -11,11 +11,9 @@ class CallController < ApplicationController
     twilio_number = ENV['TWILIO_PHONE_NUMBER']
     res = Twilio::TwiML::VoiceResponse.new do |response|
       dial = Twilio::TwiML::Dial.new(caller_id: twilio_number)
-      caller_id = Rails.application.secrets.twilio[:twilio_number]
-binding.pry
 
       if params.include?(:phoneNumber)
-        dial.number(params[:phoneNumber], caller_id: caller_id)
+        dial.number(params[:phoneNumber])
       else
         dial.client(identity: 'support_agent')
       end
