@@ -3,7 +3,29 @@
 <p class="lead">
 This is the list of most recent support tickets. Click the "Call customer" button to start a phone call from your browser.
 </p>
- 
+
+<fieldset>
+  <legend>Secrets</legend> 
+  <ul>
+    <% Rails.application.secrets.twilio do |key, val| %>
+      <li><%= key %>: <%= val %></li>
+    <% end %>
+  </ul>
+</fieldset>
+
+<fieldset>
+  <legend>Env Vars</legend> 
+    <ul>
+      <li>TWIML_APPLICATION_SID: <%= ENV['TWIML_APPLICATION_SID'] %></li>
+      <li>TWILIO_ACCOUNT_SID: <%= ENV['TWILIO_ACCOUNT_SID'] %></li>
+      <li>TWILIO_AUTH_TOKEN: <%= ENV['TWILIO_AUTH_TOKEN'] %></li>
+      <li>SID: <%= ENV['SID'] %></li>
+      <li>SECRET: <%= ENV['SECRET'] %></li>
+      <li>TWILIO_PHONE_NUMBER: <%= ENV['TWILIO_PHONE_NUMBER'] %></li>
+      <li>TWILIO_PHONE_NUMBER_SID: <%= ENV['TWILIO_PHONE_NUMBER_SID'] %></li>
+    </ul>
+</fieldset>
+
 <div class="row">
   <div class="col-md-4 col-md-push-8">
     <div class="panel panel-primary client-controls">
