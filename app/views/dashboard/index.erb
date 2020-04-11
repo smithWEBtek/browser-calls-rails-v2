@@ -7,9 +7,12 @@ This is the list of most recent support tickets. Click the "Call customer" butto
 <fieldset>
   <legend>Secrets</legend> 
   <ul>
-    <% Rails.application.secrets.twilio do |key, val| %>
-      <li><%= key %>: <%= val %></li>
-    <% end %>
+    <li>account_sid: <%= Rails.application.secrets.twilio[:account_sid] %></li>
+    <li>auth_token: <%= Rails.application.secrets.twilio[:auth_token] %></li>
+    <li><twiml_application_sid: <%= Rails.application.secrets.twilio[:twiml_application_sid] %></li>
+    <li><secret: <%= Rails.application.secrets.twilio[:secret] %></li>
+    <li><twilio_phone_number: <%= Rails.application.secrets.twilio[:twilio_phone_number] %></li>
+    <li><twiml_application_sid: <%= Rails.application.secrets.twilio[:twiml_application_sid] %></li>
   </ul>
 </fieldset>
 
