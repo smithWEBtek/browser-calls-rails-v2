@@ -16,7 +16,7 @@ class CallController < ApplicationController
       dial = Twilio::TwiML::Dial.new(caller_id: twilio_number)
 
       if params.include?(:phoneNumber)
-        dial.number(params[:phoneNumber])
+        dial.number(params[:phoneNumber], record: "record-from-answer")
       else
         dial.client(identity: 'support_agent')
       end
