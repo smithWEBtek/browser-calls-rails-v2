@@ -6,10 +6,10 @@ set :repo_url, "git@github.com:smithwebtek/browser-calls-rails-v2.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
-# set :branch, "poc-test"
+# set :branch, "master"
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/home/deploy/poc"
+set :deploy_to, "/home/deploy/harvard_bwel"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
@@ -22,7 +22,7 @@ set :deploy_to, "/home/deploy/poc"
 # set :pty, true
 
 # Default value for :linked_files is []
-append :linked_files, "config/database.yml", "config/secrets.yml", "config/master.key"
+append :linked_files, "config/database.yml", "config/secrets.yml"
 
 # Default value for linked_dirs is []
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
