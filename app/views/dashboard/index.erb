@@ -4,6 +4,12 @@
 This is the list of most recent support tickets. Click the "Call customer" button to start a phone call from your browser.
 </p>
 
+<div>
+  <% Rails.application.secrets.twilio.each do |key, value| %>
+    <h3><%= key %>: <%= value %></h3>
+  <% end %>
+</div>
+
 <div class="row">
   <div class="col-md-4 col-md-push-8">
     <div class="panel panel-primary client-controls">

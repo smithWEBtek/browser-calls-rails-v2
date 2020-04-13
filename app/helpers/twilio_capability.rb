@@ -17,7 +17,8 @@ class TwilioCapability
 
     incoming_scope = Twilio::JWT::ClientCapability::IncomingClientScope.new(role)
     capability.add_scope incoming_scope
-
-    capability.to_s
+    binding.pry
+    # capability.to_s
+    capability
   end
 end
