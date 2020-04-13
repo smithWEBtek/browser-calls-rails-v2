@@ -1,19 +1,16 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-Ticket.create([
-  {
-    name: 'Charles Holdsworth',
-    phone_number: '+14153674129',
-    description: 'I played for Middlesex in the championships and my mallet squeaked the whole time! I demand a refund!'
-  },
-  {
-    name: 'John Woodger',
-    phone_number: '+15712812415',
-    description: 'The mallet you sold me broke! Call me immediately!'
-  },
-])
+require 'csv'
+
+def import_users
+  csv_text = File.read(Rails.root.join('lib', 'import', 'users.csv'))
+  csv = CSV.parse(csv_text, headers: true, encoding: 'ISO-8859-1')
+  csv.each do |row|
+    t = Ticket.new
+    t.name = row[0]
+    t.phone_number = "+1" + row[1]
+    t.description = row[2]
+    t.save
+    puts "#{t.id}: #{t.name} user created ..."
+  end
+end
+
+import_users

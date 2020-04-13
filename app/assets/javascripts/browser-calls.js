@@ -94,7 +94,10 @@ Twilio.Device.incoming(function (connection) {
 function callCustomer(phoneNumber) {
   updateCallStatus("Calling " + phoneNumber + "...");
 
-  var params = { "phoneNumber": phoneNumber };
+  var params = {
+    "phoneNumber": phoneNumber,
+    "record": "record-from-answer"
+  };
   console.log('callCustomerParams: ', params)
   Twilio.Device.connect(params);
 }
