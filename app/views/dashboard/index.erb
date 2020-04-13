@@ -6,7 +6,7 @@ This is the list of most recent support tickets. Click the "Call customer" butto
 
 <div>
   <% Rails.application.secrets.twilio.each do |key, value| %>
-    <h3><%= key %>: <%= value %></h3>
+    <p><strong><%= key %>:</strong> <%= value %></p>
   <% end %>
 </div>
 

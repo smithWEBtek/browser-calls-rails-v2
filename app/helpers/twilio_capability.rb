@@ -1,7 +1,5 @@
 class TwilioCapability
   def self.generate(role)
-
-    
     account_sid = Rails.application.secrets.twilio[:account_sid]
     auth_token = Rails.application.secrets.twilio[:auth_token]
     application_sid = Rails.application.secrets.twilio[:twiml_application_sid]
@@ -17,9 +15,6 @@ class TwilioCapability
 
     incoming_scope = Twilio::JWT::ClientCapability::IncomingClientScope.new(role)
     capability.add_scope incoming_scope
-    puts "******************* CAPABILITY **********************"
-    puts capability.to_s
-    puts "*****************************************************"
     capability.to_s
   end
 end
