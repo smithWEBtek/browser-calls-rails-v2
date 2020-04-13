@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.12.1"
 
-set :application, "poc"
+set :application, "browsercalls1"
 set :repo_url, "git@github.com:smithwebtek/browser-calls-rails-v2.git"
 
 # Default branch is :master
@@ -9,7 +9,7 @@ set :repo_url, "git@github.com:smithwebtek/browser-calls-rails-v2.git"
 # set :branch, "poc-test"
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/home/deploy/poc"
+set :deploy_to, "/home/deploy/browsercalls1"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
