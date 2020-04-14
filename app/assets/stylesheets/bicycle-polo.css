@@ -6,7 +6,8 @@
 }
 
 .bicycle-polo-text {
-  background-color:rgba(255,255,255,0.75);
+  border: 2px solid green;
+  background-color:rgba(207, 195, 195, 0.75);
 }
 
 @media (min-width: 768px) {
