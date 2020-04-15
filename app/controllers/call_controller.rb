@@ -13,7 +13,10 @@ class CallController < ApplicationController
     twilio_number = "+16173973501"
 
     res = Twilio::TwiML::VoiceResponse.new do |response|
-      dial = Twilio::TwiML::Dial.new(caller_id: twilio_number)
+      dial = Twilio::TwiML::Dial.new(
+        caller_id: twilio_number, 
+        record: 'record-from-answer'
+      )
 
       if params.include?(:phoneNumber)
         dial.number(params[:phoneNumber])
