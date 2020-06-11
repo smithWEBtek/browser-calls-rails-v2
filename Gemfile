@@ -1,14 +1,22 @@
 source 'https://rubygems.org'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'rails', '~> 5.2.2'
-# gem 'sqlite3'
-gem 'pg'
+ruby '2.6.5'
 
-gem 'capistrano', '~> 3.11'
-gem 'capistrano-rails', '~> 1.4'
-gem 'capistrano-passenger', '~> 0.2.0'
-gem 'capistrano-rvm'
-gem 'capistrano-websocket-rails'
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '~> 5.2.3'
+# Use postgresql as the database for Active Record
+gem 'pg', '>= 0.18', '< 2.0'
+# Use Puma as the app server
+gem 'puma', '~> 3.12'
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 5.0'
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
+gem 'jbuilder', '~> 2.5'
+gem 'bootsnap', '>= 1.1.0', require: false
+gem 'active_model_serializers', '~> 0.10.0'
+gem 'rails-erd'
 
 gem 'dotenv-rails'
 gem "nokogiri", ">= 1.10.8"
@@ -17,8 +25,6 @@ gem "rake", ">= 12.3.3"
 gem "rack", ">= 2.0.8"
 gem "loofah", ">= 2.3.1"
 gem "bootstrap-sass", ">= 3.4.1"
-gem "ed25519", ">= 1.2"
-gem "bcrypt_pbkdf", ">= 1.0"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -40,4 +46,18 @@ end
 
 group :development do
   gem 'pry-rails'
+  # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+  gem 'web-console', '>= 3.3.0'
+  gem 'listen', '>= 3.0.5', '< 3.2'
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+
+  gem 'capistrano', '~> 3.11'
+  gem 'capistrano-rails', '~> 1.4'
+  gem 'capistrano-passenger', '~> 0.2.0'
+  gem 'capistrano-rvm'
+  gem 'capistrano-websocket-rails'
+  gem 'ed25519', '>= 1.2', '< 2.0'
+  gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
 end
