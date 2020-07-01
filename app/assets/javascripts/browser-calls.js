@@ -19,7 +19,7 @@ function updateCallStatus(status) {
 $(document).ready(function () {
   console.log('document ready loaded')
   $.post("/token/generate", { page: window.location.pathname }, function (data) {
-    console.log("We have a token!! ", data.token)
+    console.log("We have a TOKEN: ", data.token)
     userGesture(data.token);
   });
 });
