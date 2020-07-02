@@ -9,7 +9,7 @@ set :repo_url, "git@github.com:smithwebtek/browser-calls-rails-v2.git"
 # set :branch, "master"
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/home/deploy/browsercalls"
+set :deploy_to, "/home/deployer/browsercalls"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
