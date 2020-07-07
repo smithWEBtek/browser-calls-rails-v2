@@ -1,16 +1,16 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.12.1"
 
-set :application, "browsercalls1"
+set :application, "browsercalls"
 set :repo_url, "git@github.com:smithwebtek/browser-calls-rails-v2.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
-# set :branch, "master"
+set :branch, "master"
 
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, "/home/deployer/browsercalls"
-set :deploy_to, "/home/deployer/harvard_bwel"
+set :deploy_to, "/home/deploy/browsercalls"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
