@@ -55,9 +55,7 @@ Twilio.Device.error(function (error) {
 
 /* Callback for when Twilio Client initiates a new connection */
 Twilio.Device.connect(function (connection) {
-  console.log("Twilio.Device.connect =====>")
-
-  console.log('connection: ', connection)
+  console.log("Twilio.Device.connect =====> connection: ", connection)
   // Enable the hang up button and disable the call buttons
   hangUpButton.prop("disabled", false);
   callCustomerButton.prop("disabled", true);
