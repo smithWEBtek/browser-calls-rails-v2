@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get 'dashboard' => 'dashboard#index'
   post 'token/generate' => 'token#generate'
-  post 'calls/connect' => 'call#connect'
+  post 'calls/connect' => 'calls#connect'
 
   resources :tickets, only: [:create]
 end
